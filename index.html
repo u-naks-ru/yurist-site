@@ -18,54 +18,53 @@
   </header>
 
   <main class="wrap">
+    <div id="home-view">
     <section class="intro" aria-labelledby="about-title">
       <h2 id="about-title">Чем могу помочь</h2>
-      <p>Выберите нужный раздел, чтобы посмотреть карточки с информацией об услугах.</p>
+      <p>Выберите раздел, чтобы посмотреть все карточки.</p>
     </section>
 
-    <section class="service" aria-labelledby="civil-title">
+    <div class="category-previews">
+    <section class="service category-preview" aria-labelledby="civil-title">
       <h2 id="civil-title">Гражданские дела</h2>
-      <div class="grid">
-        <img src="images/civil/civil_01.png" alt="Карточка 1: гражданские дела" loading="lazy">
-        <img src="images/civil/civil_02.png" alt="Карточка 2: гражданские дела" loading="lazy">
-        <img src="images/civil/civil_03.png" alt="Карточка 3: гражданские дела" loading="lazy">
-        <img src="images/civil/civil_04.png" alt="Карточка 4: гражданские дела" loading="lazy">
-        <img src="images/civil/civil_05.png" alt="Карточка 5: гражданские дела" loading="lazy">
-        <img src="images/civil/civil_06.png" alt="Карточка 6: гражданские дела" loading="lazy">
-      </div>
+      <button class="category-link" type="button" data-open="civil" aria-label="Открыть категорию Гражданские дела">
+        <img src="images/civil/civil_01.png" alt="Первая карточка: гражданские дела" loading="lazy">
+        <span>Посмотреть все 6 карточек →</span>
+      </button>
     </section>
 
-    <section class="service" aria-labelledby="criminal-title">
+    <section class="service category-preview" aria-labelledby="criminal-title">
       <h2 id="criminal-title">Уголовные дела</h2>
-      <div class="grid">
-        <img src="images/criminal/criminal_01.png" alt="Карточка 1: уголовные дела" loading="lazy">
-        <img src="images/criminal/criminal_02.png" alt="Карточка 2: уголовные дела" loading="lazy">
-        <img src="images/criminal/criminal_03.png" alt="Карточка 3: уголовные дела" loading="lazy">
-        <img src="images/criminal/criminal_04.png" alt="Карточка 4: уголовные дела" loading="lazy">
-        <img src="images/criminal/criminal_05.png" alt="Карточка 5: уголовные дела" loading="lazy">
-        <img src="images/criminal/criminal_06.png" alt="Карточка 6: уголовные дела" loading="lazy">
-      </div>
+      <button class="category-link" type="button" data-open="criminal" aria-label="Открыть категорию Уголовные дела">
+        <img src="images/criminal/criminal_01.png" alt="Первая карточка: уголовные дела" loading="lazy">
+        <span>Посмотреть все 6 карточек →</span>
+      </button>
     </section>
 
-    <section class="service" aria-labelledby="bankruptcy-title">
+    <section class="service category-preview" aria-labelledby="bankruptcy-title">
       <h2 id="bankruptcy-title">Банкротство</h2>
-      <div class="grid">
-        <img src="images/bankruptcy/bankruptcy_01.png" alt="Карточка 1: банкротство" loading="lazy">
-        <img src="images/bankruptcy/bankruptcy_02.png" alt="Карточка 2: банкротство" loading="lazy">
-        <img src="images/bankruptcy/bankruptcy_03.png" alt="Карточка 3: банкротство" loading="lazy">
-        <img src="images/bankruptcy/bankruptcy_04.png" alt="Карточка 4: банкротство" loading="lazy">
-        <img src="images/bankruptcy/bankruptcy_05.png" alt="Карточка 5: банкротство" loading="lazy">
-        <img src="images/bankruptcy/bankruptcy_06.png" alt="Карточка 6: банкротство" loading="lazy">
-      </div>
+      <button class="category-link" type="button" data-open="bankruptcy" aria-label="Открыть категорию Банкротство">
+        <img src="images/bankruptcy/bankruptcy_01.png" alt="Первая карточка: банкротство" loading="lazy">
+        <span>Посмотреть все 6 карточек →</span>
+      </button>
     </section>
+    </div>
 
     <section class="contact" id="contact">
       <h2>Связаться</h2>
       <p>Здесь можно указать свои контакты.</p>
       <p class="hint">Перед публикацией замените эту строку на телефон, почту или ссылку на мессенджер.</p>
     </section>
+    </div>
+
+    <section id="category-view" class="category-view" hidden aria-live="polite">
+      <button class="back-button" id="back-button" type="button">← Все категории</button>
+      <h2 id="category-heading"></h2>
+      <div class="grid" id="category-grid"></div>
+    </section>
   </main>
 
   <footer><div class="wrap">© <span id="year">2026</span> Юридическая помощь</div></footer>
+  <script src="script.js"></script>
 </body>
 </html>
